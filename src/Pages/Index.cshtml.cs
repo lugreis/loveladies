@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using loveladies.Models;
+using loveladies.Services;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using System;
@@ -10,16 +12,18 @@ namespace loveladies.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        private readonly CategoriasService _categoriasService;
 
-        public IndexModel(ILogger<IndexModel> logger)
-        {
-            _logger = logger;
+        public List<Categoria> Categorias { get; set; }
+
+        public IndexModel(CategoriasService categoriasService)
+        {          
+            _categoriasService = categoriasService;
         }
 
         public void OnGet()
         {
-
+            Categorias = _categoriasService.ObtemCategoria();
         }
     }
 }
