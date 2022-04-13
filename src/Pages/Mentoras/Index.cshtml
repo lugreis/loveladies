@@ -1,0 +1,15 @@
+﻿@page
+@model IndexModel;
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="text-center">
+
+    @foreach (var mentora in @Model.Mentoras)
+    {
+        <p>@(mentora.Nome)</p>
+        <p>@(mentora.Ativo)</p>
+    }
+
+</div>

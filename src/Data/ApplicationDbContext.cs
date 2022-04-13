@@ -15,5 +15,6 @@ namespace loveladies.Data
         }
 
         public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Mentora> Mentoras { get; set; }
     }
 }
