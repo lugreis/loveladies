@@ -15,6 +15,9 @@ namespace loveladies.Pages.Mentoras
 
         public List<Mentora> Mentoras { get; set; }
 
+        [FromQuery(Name = "categoria")]
+        public string Categoria { get; set; }
+
         public IndexModel(MentorasService mentorasService)
         {
             _mentorasService = mentorasService;
@@ -22,7 +25,7 @@ namespace loveladies.Pages.Mentoras
 
         public void OnGet()
         {
-            Mentoras = _mentorasService.ObtemMentora();
+            Mentoras = _mentorasService.ObtemMentoraPorCategoria(int.Parse(Categoria));
         }
     }
 }
