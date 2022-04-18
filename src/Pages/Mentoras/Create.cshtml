@@ -1,0 +1,44 @@
+﻿@page
+@model loveladies.Pages.Mentoras.CreateModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<h4>Mentora</h4>
+<hr/>
+<div class="row">
+    <div class="col-md-4">
+        <form method="Post">
+            <div class="form-group">
+                <label asp-for="Mentora.Nome" class="control-label"></label>
+                <input asp-for="Mentora.Nome" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Mentora.Email" class="control-label"></label>
+                <input asp-for="Mentora.Email" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Mentora.RedeSocial" class="control-label"></label>
+                <input asp-for="Mentora.RedeSocial" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Mentora.Categoria" class="control-label"></label>
+                <input asp-for="Mentora.Categoria" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Mentora.Titulo" class="control-label"></label>
+                <input asp-for="Mentora.Titulo" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Mentora.Descricao" class="control-label"></label>
+                <input asp-for="Mentora.Descricao" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-dark" />
+            </div>
+        </form>
+    </div>
+</div>
+

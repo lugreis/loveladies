@@ -22,6 +22,8 @@ namespace loveladies.Services
         public void AdicionaMentora(Mentora mentora)
         {
             _contexto.Mentoras.Add(mentora);
+            _contexto.SaveChanges();
         }
+
     }
 }
