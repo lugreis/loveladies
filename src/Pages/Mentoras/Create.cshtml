@@ -25,7 +25,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Mentora.Categoria" class="control-label"></label>
-                <select asp-for="Mentora.CategoriaId" asp-items="@Model.Categorias"></select>
+                <select asp-for="Mentora.CategoriaId" asp-items="@Model.Categorias" class="form-control"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Mentora.Titulo" class="control-label"></label>
@@ -34,6 +34,10 @@
             <div class="form-group">
                 <label asp-for="Mentora.Descricao" class="control-label"></label>
                 <input asp-for="Mentora.Descricao" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Mentora.Ativo" class="control-label"></label>
+                <input asp-for="Mentora.Ativo"/>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-dark" />
