@@ -10,6 +10,7 @@ namespace loveladies.Models
         public string Email { get; set; }
         public string RedeSocial { get; set; }
         public Categoria Categoria { get; set; }
+        public int CategoriaId { get; set; }
         public string Titulo { get; set; }
         public string Descricao { get; set; }
         public bool Ativo { get; set; }
