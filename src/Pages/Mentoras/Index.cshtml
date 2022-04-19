@@ -1,15 +1,28 @@
 ﻿@page
 @model IndexModel;
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Mentorias Disponíveis";
 }
 
-<div class="text-center">
+<h2>@ViewData["Title"]</h2>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Tema</th>
+            <th scope="col">Nome da Mentora</th>
+            <th scope="col">Detalhes</th>
+        </tr>
+    </thead>
 
     @foreach (var mentora in @Model.Mentoras)
     {
-        <p>@(mentora.Nome)</p>
-        <p>@(mentora.Ativo)</p>
+        <tbody>
+            <tr class="table-default">
+                <th scope="row">@(mentora.Titulo)</th>
+                <td>@(mentora.Nome)</td>
+                <td>Detalhes</td>
+            </tr>
+        </tbody>
     }
-
-</div>
+</table>
