@@ -10,8 +10,7 @@
 
     @foreach (var categoria in @Model.Categorias)
     {
-        <p>@(categoria.Id)</p>
-        <p>@(categoria.Nome)</p>
+        <a href="/mentoras?categoria=@(categoria.Id)">@(categoria.Nome)</a>
     }
 
 </div>
