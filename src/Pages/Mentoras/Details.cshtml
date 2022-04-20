@@ -1,0 +1,53 @@
+﻿@page "{id}"
+@model loveladies.Pages.Mentoras.DetailsModel
+@{
+    ViewData["Title"] = "Detalhes da Mentoria";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Nome da Mentora
+        </dt>
+        <dd class="col-sm-10">
+            @(Model.Mentora.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            Email
+        </dt>
+        <dd class="col-sm-10">
+            @(Model.Mentora.Email)
+        </dd>
+        <dt class="col-sm-2">
+            Rede Social
+        </dt>
+        <dd class="col-sm-10">
+            @(Model.Mentora.RedeSocial)
+        </dd>
+        <dt class="col-sm-2">
+            Título da Mentoria
+        </dt>
+        <dd class="col-sm-10">
+            @(Model.Mentora.Titulo)
+        </dd>
+        <dt class="col-sm-2">
+            Categoria
+        </dt>
+        <dd class="col-sm-10">
+            @(Model.Mentora.Categoria)
+        </dd>
+        <dt class="col-sm-2">
+            Descrição da Mentoria
+        </dt>
+        <dd class="col-sm-10">
+            @(Model.Mentora.Descricao)
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar para mentorias</a>
+</div>

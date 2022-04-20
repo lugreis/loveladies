@@ -24,6 +24,11 @@ namespace loveladies.Services
             return _contexto.Mentoras.Where(x => x.CategoriaId == categoriaId).ToList();
         }
 
+        public Mentora ObtemMentoraPorId(int id)
+        {
+            return _contexto.Mentoras.First(x => x.Id == id);
+        }
+
         public void AdicionaMentora(Mentora mentora)
         {
             _contexto.Mentoras.Add(mentora);
