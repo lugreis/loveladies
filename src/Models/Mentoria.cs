@@ -19,7 +19,7 @@ namespace loveladies.Models
         public string Descricao { get; set; }
         public bool Ativo { get; set; }
         public IdentityUser User { get; set; }
-        public int UserId { get; set; }
+        public string UserId { get; set; }
 
         public Mentoria()
         {

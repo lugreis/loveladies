@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using loveladies.Models;
 using loveladies.Services;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -12,22 +13,27 @@ namespace loveladies.Pages.Mentorias
 {
     public class CreateModel : PageModel
     {
-        private readonly MentoriasService _mentoraService;
+        private readonly MentoriasService _mentoriaService;
         private readonly CategoriasService _categoriaService;
+        private readonly UserManager<IdentityUser> _userManager;
 
         [BindProperty]
-        public Mentoria Mentora { get; set; }
+        public Mentoria Mentoria { get; set; }
         public SelectList Categorias { get; set; }
 
-        public CreateModel(MentoriasService mentoraService, CategoriasService categoriaService)
+        public CreateModel(MentoriasService mentoraService, CategoriasService categoriaService, UserManager<IdentityUser> userManager)
         {
-            _mentoraService = mentoraService;
+            _mentoriaService = mentoraService;
             _categoriaService = categoriaService;
+            _userManager = userManager;
         }
 
         public IActionResult OnPost()
         {
-            _mentoraService.AdicionaMentoria(Mentora);
+           var userId = _userManager.GetUserId(HttpContext.User);
+            Mentoria.UserId = userId;
+
+            _mentoriaService.AdicionaMentoria(Mentoria);
             return RedirectToAction("Index");
         }
 

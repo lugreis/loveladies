@@ -11,32 +11,32 @@
     <div class="col-md-4">
         <form method="Post">
             <div class="form-group">
-                <label asp-for="Mentora.Nome" class="control-label"></label>
-                <input asp-for="Mentora.Nome" class="form-control" />
+                <label asp-for="Mentoria.Nome" class="control-label"></label>
+                <input asp-for="Mentoria.Nome" class="form-control" />
             </div>
             <div class="form-group">
-                <label asp-for="Mentora.Email" class="control-label"></label>
-                <input asp-for="Mentora.Email" class="form-control" />
+                <label asp-for="Mentoria.Email" class="control-label"></label>
+                <input asp-for="Mentoria.Email" class="form-control" />
             </div>
             <div class="form-group">
-                <label asp-for="Mentora.RedeSocial" class="control-label"></label>
-                <input asp-for="Mentora.RedeSocial" class="form-control" />
+                <label asp-for="Mentoria.RedeSocial" class="control-label"></label>
+                <input asp-for="Mentoria.RedeSocial" class="form-control" />
             </div>
             <div class="form-group">
-                <label asp-for="Mentora.Categoria" class="control-label"></label>
-                <select asp-for="Mentora.CategoriaId" asp-items="@Model.Categorias" class="form-control"></select>
+                <label asp-for="Mentoria.Categoria" class="control-label"></label>
+                <select asp-for="Mentoria.CategoriaId" asp-items="@Model.Categorias" class="form-control"></select>
             </div>
             <div class="form-group">
-                <label asp-for="Mentora.Titulo" class="control-label"></label>
-                <input asp-for="Mentora.Titulo" class="form-control" />
+                <label asp-for="Mentoria.Titulo" class="control-label"></label>
+                <input asp-for="Mentoria.Titulo" class="form-control" />
             </div>
             <div class="form-group">
-                <label asp-for="Mentora.Descricao" class="control-label"></label>
-                <input asp-for="Mentora.Descricao" class="form-control" style="height: 79.5px"/>
+                <label asp-for="Mentoria.Descricao" class="control-label"></label>
+                <input asp-for="Mentoria.Descricao" class="form-control" style="height: 79.5px"/>
             </div>
             <div class="form-group">
-                <label asp-for="Mentora.Ativo" class="control-label" type="checkbox"></label>
-                <input asp-for="Mentora.Ativo"/>
+                <label asp-for="Mentoria.Ativo" class="control-label" type="checkbox"></label>
+                <input asp-for="Mentoria.Ativo"/>
             </div>
             <div class="form-group">
                 <input type="submit" value="Cadastrar" class="btn btn-info float-right" asp-page-handler="Index"/>
