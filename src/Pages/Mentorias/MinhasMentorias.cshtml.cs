@@ -28,5 +28,11 @@ namespace loveladies.Pages.Mentorias
 
             Mentorias = _mentoriaService.ObtemMentoriasPorUserId(userId);
         }
+
+        public IActionResult OnPostDelete(int id)
+        {
+            _mentoriaService.ExcluiMentoria(id);
+            return RedirectToAction("MinhasMentorias");
+        }
     }
 }

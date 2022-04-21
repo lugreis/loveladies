@@ -17,6 +17,7 @@
             <tr class="table-default">
                 <th scope="row">@(mentoria.Titulo)</th>
                 <td>@(mentoria.Nome)</td>
+                <td><form asp-page="MinhasMentorias" asp-page-handler="Delete" ><input type="hidden" value="@(mentoria.Id)" name="Id"/><button type="submit">Delete</button></form></td>
             </tr>
         </tbody>
     }
