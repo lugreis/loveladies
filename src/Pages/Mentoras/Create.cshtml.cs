@@ -16,7 +16,7 @@ namespace loveladies.Pages.Mentoras
         private readonly CategoriasService _categoriaService;
 
         [BindProperty]
-        public Mentora Mentora { get; set; }
+        public Mentoria Mentora { get; set; }
         public SelectList Categorias { get; set; }
 
         public CreateModel(MentorasService mentoraService, CategoriasService categoriaService)

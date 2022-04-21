@@ -14,24 +14,24 @@ namespace loveladies.Services
             _contexto = contexto;
         }
 
-        public List<Mentora> ObtemMentora()
+        public List<Mentoria> ObtemMentora()
         {
-            return _contexto.Mentoras.ToList();
+            return _contexto.Mentorias.ToList();
         }
 
-        public List<Mentora> ObtemMentoraPorCategoria(int categoriaId)
+        public List<Mentoria> ObtemMentoraPorCategoria(int categoriaId)
         {
-            return _contexto.Mentoras.Where(x => x.CategoriaId == categoriaId).ToList();
+            return _contexto.Mentorias.Where(x => x.CategoriaId == categoriaId).ToList();
         }
 
-        public Mentora ObtemMentoraPorId(int id)
+        public Mentoria ObtemMentoraPorId(int id)
         {
-            return _contexto.Mentoras.First(x => x.Id == id);
+            return _contexto.Mentorias.First(x => x.Id == id);
         }
 
-        public void AdicionaMentora(Mentora mentora)
+        public void AdicionaMentora(Mentoria mentora)
         {
-            _contexto.Mentoras.Add(mentora);
+            _contexto.Mentorias.Add(mentora);
             _contexto.SaveChanges();
         }
 

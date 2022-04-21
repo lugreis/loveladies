@@ -13,7 +13,7 @@ namespace loveladies.Pages.Mentoras
     {
         private readonly MentorasService _mentorasService;
 
-        public List<Mentora> Mentoras { get; set; }
+        public List<Mentoria> Mentoras { get; set; }
 
         [FromQuery(Name = "categoria")]
         public string Categoria { get; set; }

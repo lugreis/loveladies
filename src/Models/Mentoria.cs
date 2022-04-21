@@ -1,8 +1,9 @@
-﻿using System.ComponentModel;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel;
 
 namespace loveladies.Models
 {
-    public class Mentora
+    public class Mentoria
     {
         public int Id { get; set; }
         public string Nome { get; set; }
@@ -17,13 +18,15 @@ namespace loveladies.Models
         [DisplayName("Descrição")]
         public string Descricao { get; set; }
         public bool Ativo { get; set; }
+        public IdentityUser User { get; set; }
+        public int UserId { get; set; }
 
-        public Mentora()
+        public Mentoria()
         {
 
         }
 
-        public Mentora(string nome)
+        public Mentoria(string nome)
         {
             Nome = nome;
         }

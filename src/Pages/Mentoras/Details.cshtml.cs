@@ -18,7 +18,7 @@ namespace loveladies.Pages.Mentoras
             _mentoraService = mentoraService;
         }
 
-        public Mentora Mentora { get; set; }
+        public Mentoria Mentora { get; set; }
 
         public void OnGet(int id)
         {
