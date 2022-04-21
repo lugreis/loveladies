@@ -7,13 +7,13 @@ using loveladies.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace loveladies.Pages.Mentoras
+namespace loveladies.Pages.Mentorias
 {
     public class DetailsModel : PageModel
     {
-        private readonly MentorasService _mentoraService;
+        private readonly MentoriasService _mentoraService;
 
-        public DetailsModel(MentorasService mentoraService)
+        public DetailsModel(MentoriasService mentoraService)
         {
             _mentoraService = mentoraService;
         }
@@ -22,7 +22,7 @@ namespace loveladies.Pages.Mentoras
 
         public void OnGet(int id)
         {
-            Mentora = _mentoraService.ObtemMentoraPorId(id);
+            Mentora = _mentoraService.ObtemMentoriaPorId(id);
         }
     }
 }

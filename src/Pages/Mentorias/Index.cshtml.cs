@@ -7,25 +7,25 @@ using loveladies.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace loveladies.Pages.Mentoras
+namespace loveladies.Pages.Mentorias
 {
     public class IndexModel : PageModel
     {
-        private readonly MentorasService _mentorasService;
+        private readonly MentoriasService _mentorasService;
 
-        public List<Mentoria> Mentoras { get; set; }
+        public List<Mentoria> Mentorias { get; set; }
 
         [FromQuery(Name = "categoria")]
         public string Categoria { get; set; }
 
-        public IndexModel(MentorasService mentorasService)
+        public IndexModel(MentoriasService mentorasService)
         {
             _mentorasService = mentorasService;
         }
 
         public void OnGet()
         {
-            Mentoras = _mentorasService.ObtemMentoraPorCategoria(int.Parse(Categoria));
+            Mentorias = _mentorasService.ObtemMentoriaPorCategoria(int.Parse(Categoria));
         }
     }
 }

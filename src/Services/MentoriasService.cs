@@ -5,33 +5,33 @@ using System.Linq;
 
 namespace loveladies.Services
 {
-    public class MentorasService
+    public class MentoriasService
     {
         private readonly ApplicationDbContext _contexto;
 
-        public MentorasService(ApplicationDbContext contexto)
+        public MentoriasService(ApplicationDbContext contexto)
         {
             _contexto = contexto;
         }
 
-        public List<Mentoria> ObtemMentora()
+        public List<Mentoria> ObtemMentoria()
         {
             return _contexto.Mentorias.ToList();
         }
 
-        public List<Mentoria> ObtemMentoraPorCategoria(int categoriaId)
+        public List<Mentoria> ObtemMentoriaPorCategoria(int categoriaId)
         {
             return _contexto.Mentorias.Where(x => x.CategoriaId == categoriaId).ToList();
         }
 
-        public Mentoria ObtemMentoraPorId(int id)
+        public Mentoria ObtemMentoriaPorId(int id)
         {
             return _contexto.Mentorias.First(x => x.Id == id);
         }
 
-        public void AdicionaMentora(Mentoria mentora)
+        public void AdicionaMentoria(Mentoria mentoria)
         {
-            _contexto.Mentorias.Add(mentora);
+            _contexto.Mentorias.Add(mentoria);
             _contexto.SaveChanges();
         }
 

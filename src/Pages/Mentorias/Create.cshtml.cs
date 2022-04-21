@@ -8,18 +8,18 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace loveladies.Pages.Mentoras
+namespace loveladies.Pages.Mentorias
 {
     public class CreateModel : PageModel
     {
-        private readonly MentorasService _mentoraService;
+        private readonly MentoriasService _mentoraService;
         private readonly CategoriasService _categoriaService;
 
         [BindProperty]
         public Mentoria Mentora { get; set; }
         public SelectList Categorias { get; set; }
 
-        public CreateModel(MentorasService mentoraService, CategoriasService categoriaService)
+        public CreateModel(MentoriasService mentoraService, CategoriasService categoriaService)
         {
             _mentoraService = mentoraService;
             _categoriaService = categoriaService;
@@ -27,7 +27,7 @@ namespace loveladies.Pages.Mentoras
 
         public IActionResult OnPost()
         {
-            _mentoraService.AdicionaMentora(Mentora);
+            _mentoraService.AdicionaMentoria(Mentora);
             return RedirectToAction("Index");
         }
 

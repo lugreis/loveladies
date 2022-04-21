@@ -37,7 +37,7 @@ namespace loveladies
             services.AddRazorPages();
 
             services.AddScoped<CategoriasService>();
-            services.AddScoped<MentorasService>();
+            services.AddScoped<MentoriasService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
