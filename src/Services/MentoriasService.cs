@@ -29,6 +29,11 @@ namespace loveladies.Services
             return _contexto.Mentorias.First(x => x.Id == id);
         }
 
+        public List<Mentoria> ObtemMentoriasPorUserId(string userId)
+        {
+            return _contexto.Mentorias.Where(x => x.UserId == userId).ToList();
+        }
+
         public void AdicionaMentoria(Mentoria mentoria)
         {
             _contexto.Mentorias.Add(mentoria);

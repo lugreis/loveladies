@@ -1,0 +1,23 @@
+﻿@page
+@model loveladies.Pages.Mentorias.MinhasMentoriasModel
+@{
+}
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Tema</th>
+            <th scope="col">Nome da Mentora</th>
+        </tr>
+    </thead>
+
+    @foreach (var mentoria in @Model.Mentorias)
+    {
+        <tbody>
+            <tr class="table-default">
+                <th scope="row">@(mentoria.Titulo)</th>
+                <td>@(mentoria.Nome)</td>
+            </tr>
+        </tbody>
+    }
+</table>
