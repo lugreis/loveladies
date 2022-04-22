@@ -34,7 +34,7 @@ namespace loveladies.Pages.Mentorias
             Mentoria.UserId = userId;
 
             _mentoriaService.AdicionaMentoria(Mentoria);
-            return RedirectToAction("Index");
+            return RedirectToPage("MinhasMentorias");
         }
 
         public void OnGet()

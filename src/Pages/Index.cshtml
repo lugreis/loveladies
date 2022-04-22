@@ -6,9 +6,10 @@
 
 <div class="jumbotron">
     <h1 class="display-3">Loveladies</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <p class="lead">Encontre uma mentora que te ajudará a avançar nos seus estudos e projeto.</p>
+    <p>Veja as mentorias abaixo e entre em contato com a mentora escolhida.</p>
     <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <p>Você tem tempo livre e vontade de ajudar mulheres no seu desenvolvimento profissional?</p>
     <p class="lead">
         <a class="btn btn-lg btn-info" href="#" role="button">Seja uma mentora</a>
     </p>
@@ -24,7 +25,7 @@
                 <div class="card border-info mb-3" style="max-width: 20rem;">
                     <div class="card-header"><h4><strong><a href="/mentorias?categoria=@(categoria.Id)" style="text-decoration:none; color:black">@(categoria.Nome)</a></strong></h4></div>
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text">@(categoria.Descricao)</p>
                     </div>
                 </div>
             </div>

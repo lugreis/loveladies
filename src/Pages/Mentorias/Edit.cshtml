@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{id}"
 @model loveladies.Pages.Mentorias.EditModel
 @{
     ViewData["Title"] = "Editar Mentoria";
@@ -10,6 +10,7 @@
 <div class="row">
     <div class="col-md-4">
         <form method="Post">
+            <input type="hidden" asp-for="Mentoria.Id" class="form-control" />
             <div class="form-group">
                 <label asp-for="Mentoria.Nome" class="control-label"></label>
                 <input asp-for="Mentoria.Nome" class="form-control" />
