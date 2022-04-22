@@ -34,7 +34,12 @@ namespace loveladies
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddRazorPages();
+            services.AddRazorPages(options =>
+            {
+                options.Conventions.AuthorizePage("/Mentorias/Create");
+                options.Conventions.AuthorizePage("/Mentorias/Edit");
+                options.Conventions.AuthorizePage("/Mentorias/MinhasMentorias");
+            });
 
             services.AddScoped<CategoriasService>();
             services.AddScoped<MentoriasService>();
