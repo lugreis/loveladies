@@ -40,6 +40,12 @@ namespace loveladies.Services
             _contexto.SaveChanges();
         }
 
+        public void EditaMentoria(Mentoria mentoria)
+        {
+            _contexto.Mentorias.Update(mentoria);
+            _contexto.SaveChanges();
+        }
+
         public void ExcluiMentoria(int id)
         {
             var mentoria = ObtemMentoriaPorId(id);

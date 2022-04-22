@@ -1,0 +1,46 @@
+﻿@page
+@model loveladies.Pages.Mentorias.EditModel
+@{
+    ViewData["Title"] = "Editar Mentoria";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="Post">
+            <div class="form-group">
+                <label asp-for="Mentoria.Nome" class="control-label"></label>
+                <input asp-for="Mentoria.Nome" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Mentoria.Email" class="control-label"></label>
+                <input asp-for="Mentoria.Email" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Mentoria.RedeSocial" class="control-label"></label>
+                <input asp-for="Mentoria.RedeSocial" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Mentoria.Categoria" class="control-label"></label>
+                <select asp-for="Mentoria.CategoriaId" asp-items="@Model.Categorias" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mentoria.Titulo" class="control-label"></label>
+                <input asp-for="Mentoria.Titulo" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Mentoria.Descricao" class="control-label"></label>
+                <input asp-for="Mentoria.Descricao" class="form-control" style="height: 79.5px" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Mentoria.Ativo" class="control-label" type="checkbox"></label>
+                <input asp-for="Mentoria.Ativo" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-info float-right" asp-page-handler="Index" />
+            </div>
+        </form>
+    </div>
+</div>
