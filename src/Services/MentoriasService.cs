@@ -21,7 +21,7 @@ namespace loveladies.Services
 
         public List<Mentoria> ObtemMentoriaPorCategoria(int categoriaId)
         {
-            return _contexto.Mentorias.Where(x => x.CategoriaId == categoriaId).ToList();
+            return _contexto.Mentorias.Where(x => x.CategoriaId == categoriaId && x.Ativo == true).ToList();
         }
 
         public Mentoria ObtemMentoriaPorId(int id)
