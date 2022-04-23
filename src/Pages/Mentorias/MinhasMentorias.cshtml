@@ -1,13 +1,18 @@
 ﻿@page
 @model loveladies.Pages.Mentorias.MinhasMentoriasModel
 @{
+    ViewData["Title"] = "Minhas Mentorias";
 }
+
+<h2>@ViewData["Title"]</h2>
 
 <table class="table table-hover">
     <thead>
         <tr>
             <th scope="col">Tema</th>
-            <th scope="col">Nome da Mentora</th>
+            <th scope="col">Descrição</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
         </tr>
     </thead>
 
@@ -16,9 +21,9 @@
         <tbody>
             <tr class="table-default">
                 <th scope="row">@(mentoria.Titulo)</th>
-                <td>@(mentoria.Nome)</td>
-                <td><a href="/mentorias/edit/@(mentoria.Id)" class="btn btn-info">Editar</a></td>
-                <td><form asp-page="MinhasMentorias" asp-page-handler="Delete"><input type="hidden" value="@(mentoria.Id)" name="Id" /><button type="submit" class="btn btn-danger">Delete</button></form></td>
+                <td>@(mentoria.Descricao)</td>
+                <td><a href="/mentorias/edit/@(mentoria.Id)" class="btn btn-sm btn-info">Editar</a></td>
+                <td><form asp-page="MinhasMentorias" asp-page-handler="Delete"><input type="hidden" value="@(mentoria.Id)" name="Id" /><button type="submit" class="btn btn-sm btn-danger">Delete</button></form></td>
             </tr>
         </tbody>
     }
